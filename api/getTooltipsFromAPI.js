@@ -1,7 +1,7 @@
 const URL = "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party";
 const TOKEN = "e99a28abd4bc7333269f663b20d9e590c7b62eb3";
 
-export default async function getTooltips(query) {
+export default async function getTooltipsFromAPI(query, count) {
     const options = {
         method: "POST",
         mode: "cors",
@@ -10,7 +10,7 @@ export default async function getTooltips(query) {
             "Accept": "application/json",
             "Authorization": "Token " + TOKEN
         },
-        body: JSON.stringify({query: query})
+        body: JSON.stringify({query, count})
     }
     
     try {

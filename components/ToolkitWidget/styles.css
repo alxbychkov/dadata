@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tooltip-widget {
+  padding: 10px 15px;
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+.widget-input {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3px;
+}
+
+.widget-input input[type='text'] {
+  height: 35px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-size: 16px;
+}
+
+.widget-input:first-child {
+  position: relative;
+}
+
+.widget-input:first-child .input-label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.widget-input-values {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: lightgray;
+  color: grey;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.widget-input-values.active {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+
+.values-title {
+  font-size: 14px;
+}
+
+.widget-input-values div {
+  cursor: context-menu;
+  transition: 0.3s;
+}
+
+.widget-input-values div:hover {
+  filter: brightness(0.3);
+}
+
+@media screen and (min-width: 768px) {
+  .widget-input:not(:first-child) {
+    max-width: 65%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .widget-input-values {
+    font-size: 14px;
+  }
+}
