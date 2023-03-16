@@ -8,4 +8,4 @@ Simple widget for search organizations.
 + CSS
 + Pure JS (web-components)
 
-[https://alxbychkov.github.io/dadata/](Link) to example.
+[Link](https://alxbychkov.github.io/dadata/) for example.
